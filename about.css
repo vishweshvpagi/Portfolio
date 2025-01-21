@@ -1,0 +1,72 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.skillsection {
+  padding: 2rem;
+  background-color: #1a1a1a; /* Dark background for contrast */
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  color: #c4dfe6;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
+/* Skill Cards */
+.skillcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: #333; /* Slightly lighter dark background */
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 180px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+  color: #c4dfe6;
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Star styling */
+.star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #fff 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interaction with the star */
+  animation: starAnimation 1.5s ease-out forwards;
+}
+
+@keyframes starAnimation {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,203 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  background-color: #1c1c1e;
+  color: #d1d1d6;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  position: relative; /* Ensure body covers the full viewport height */
+}
+
+/* Star styling */
+.star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #fff 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interaction with the star */
+  animation: starAnimation 1.5s ease-out forwards;
+}
+
+@keyframes starAnimation {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Heading and Link Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #a390ee;
+}
+
+.highlight {
+  color: violet;
+}
+
+a {
+  color: #64d2ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a390ee;
+}
+
+/* Button Styles */
+button {
+  background-color: #64d2ff;
+  color: #1c1c1e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a390ee;
+  transform: scale(1.05);
+}
+
+/* Container Styles */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Card Styles */
+.card {
+  background-color: #2c2c2e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes starAnimation {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* Class Animations */
+.fade-in {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.fade-in.delay-1 {
+  animation: fadeIn 2s 0.5s ease-out forwards;
+}
+
+.image-fade {
+  animation: imageFade 1.5s ease-out forwards;
+}
+
+.slide-in {
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+.text-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.text-element {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-fade {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.samesize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Class for sliding in text from the left */
+.slide-in-from-left {
+  animation: slideInFromLeft 1.5s ease-out forwards;
+}
